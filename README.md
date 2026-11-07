@@ -1,14 +1,14 @@
-# homebridge-doorman
+# homebridge-doorman.mobi
 
-Exposes a Doorman buzzer asset from `szpala.com_www` as a HomeKit lock. Locking and unlocking updates the app through its authenticated API.
+Allows control of buzzers from `doorman.mobi` as a HomeKit lock. Locking and unlocking updates the app through its authenticated API.
 
 Install the plugin with Homebridge, then add an accessory:
 
 ```json
 {
-  "accessory": "Doorman",
-  "name": "Front Door",
-  "apiUrl": "https://szpala.com/api",
+  "accessory": "doorman.mobi",
+  "name": "Lobby Door",
+  "apiUrl": "https://doorman.mobi/api",
   "doorId": 1,
   "email": "homebridge@example.com",
   "password": "replace-with-a-dedicated-password"
@@ -21,12 +21,12 @@ Alternatively, configure `accessToken` instead of `email` and `password`:
 
 ```json
 {
-  "accessory": "Doorman",
-  "name": "Front Door",
-  "apiUrl": "https://szpala.com/api",
+  "accessory": "doorman.mobi",
+  "name": "Lobby Door",
+  "apiUrl": "https://doorman.mobi/api",
   "doorId": 1,
   "accessToken": "your-doorman-session-token"
 }
 ```
 
-Use a dedicated Doorman account limited to the intended buzzer assets.
+Use a dedicated doorman.mobi account limited to the intended buzzer assets.

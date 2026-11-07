@@ -13,21 +13,21 @@
     "homebridge": ">=1.6.0"
   },
   "homebridge": {
-    "pluginIdentifier": "homebridge-doorman",
-    "pluginAlias": "Doorman",
-    "accessory": "Doorman",
+    "pluginIdentifier": "homebridge-doorman.mobi",
+    "pluginAlias": "doorman.mobi",
+    "accessory": "Buzzer",
     "schema": {
       "type": "object",
       "properties": {
         "name": {
           "title": "Accessory name",
           "type": "string",
-          "default": "Doorman"
+          "default": "Buzzer"
         },
         "apiUrl": {
-          "title": "Doorman API URL",
+          "title": "doorman.mobi API URL",
           "type": "string",
-          "description": "The Doorman API base URL, such as https://szpala.com/api."
+          "description": "The doorman.mobi API base URL, such as https://szpala.com/api."
         },
         "doorId": {
           "title": "Buzzer asset ID",
@@ -37,17 +37,17 @@
         "accessToken": {
           "title": "Access token",
           "type": "string",
-          "description": "A Doorman bearer token. Use this or an email and password."
+          "description": "A doorman.mobi bearer token. Use this or an email and password."
         },
         "email": {
           "title": "Email",
           "type": "string",
-          "description": "Used to obtain a Doorman session when accessToken is not set."
+          "description": "Used to obtain a doorman.mobi session when accessToken is not set."
         },
         "password": {
           "title": "Password",
           "type": "string",
-          "description": "Used with email to obtain a Doorman session when accessToken is not set."
+          "description": "Used with email to obtain a doorman.mobi session when accessToken is not set."
         }
       },
       "required": [
