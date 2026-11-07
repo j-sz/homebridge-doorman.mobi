@@ -1,0 +1,66 @@
+{
+  "name": "homebridge-doorman.mobi",
+  "version": "1.0.0",
+  "description": "Homebridge accessory for buzzers controlled by doorman.mobi",
+  "main": "index.js",
+  "keywords": [
+    "homebridge-plugin",
+    "lock",
+    "doorman"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "homebridge": ">=1.6.0"
+  },
+  "homebridge": {
+    "pluginIdentifier": "homebridge-doorman",
+    "pluginAlias": "Doorman",
+    "accessory": "Doorman",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Accessory name",
+          "type": "string",
+          "default": "Doorman"
+        },
+        "apiUrl": {
+          "title": "Doorman API URL",
+          "type": "string",
+          "description": "The Doorman API base URL, such as https://szpala.com/api."
+        },
+        "doorId": {
+          "title": "Buzzer asset ID",
+          "type": "integer",
+          "minimum": 1
+        },
+        "accessToken": {
+          "title": "Access token",
+          "type": "string",
+          "description": "A Doorman bearer token. Use this or an email and password."
+        },
+        "email": {
+          "title": "Email",
+          "type": "string",
+          "description": "Used to obtain a Doorman session when accessToken is not set."
+        },
+        "password": {
+          "title": "Password",
+          "type": "string",
+          "description": "Used with email to obtain a Doorman session when accessToken is not set."
+        }
+      },
+      "required": [
+        "apiUrl",
+        "doorId"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "peerDependencies": {
+    "homebridge": ">=1.6.0"
+  },
+  "license": "MIT"
+}
